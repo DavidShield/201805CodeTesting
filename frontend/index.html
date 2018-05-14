@@ -6,28 +6,41 @@
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<style>
+    
+
+</style>
+    
 </head>
 <body>
 
 <div ng-app="todoapp" ng-controller="appCtrl">
 
-    <p>Input something in the input box:</p>
+    <p>TODO list:</p>
+    
+    <!--
     <p>Name: <input type="text" ng-model="name"></p>
-    <p ng-bind="name"></p>
+    Actions: {{name}}
+    -->
+    
+    <p></p>
+    <!--show the todo list-->
     <ul>
-        <li>Bug milk</li>
-        <li>Code</li>
-        <li>Sleep</li>
+        <li ng-repeat="todo in todoList">
+            <button ng-click="deleteTodo(todo.id)">Delete</button>button>{{x}} 
+        </li>
     </ul>
-
-    <form action="">
-        
+    
+    <!--add events to do-->
+    <form>
+        <input type="text" ng-mode="newTodo" placeholder="new Events to do">
+        <input type="button" value="Add" ng-click="addTodo">
     </form>
 
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-<script src="./js/todoapp.js"></script>
+<script src="./js/todoapp_test.js"></script>
 
 </body>
 </html>
