@@ -16,7 +16,9 @@ class TodoController extends Controller
     {
         //get all todos
         $todolist = Todo::all();
-
+        
+        
+        
         return response()->json([
             "this uri is todos, http method is GET",
             "page is used to show a list of todos",

@@ -27,7 +27,7 @@
     <!--show the todo list-->
     <ul>
         <li ng-repeat="todo in todoList">
-            <button ng-click="deleteTodo(todo.id)">Delete</button>button>{{x}} 
+            <button ng-click="deleteTodo(todo.id)">Delete</button>{{todo}} 
         </li>
     </ul>
     
@@ -40,7 +40,7 @@
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-<script src="./js/todoapp_test.js"></script>
+<script src="./js/todoapp.js"></script>
 
 </body>
 </html>
